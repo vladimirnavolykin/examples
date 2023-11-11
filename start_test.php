@@ -6,7 +6,7 @@ if (PHP_SAPI !== 'cli') {
 
 require_once 'functions.php';
 
-$files = glob(__DIR__ . '/*/*.php');
+$files = glob(__DIR__ . '/src/*/*/*.php');
 
 echo "\033[43mНачало\033[49m" . PHP_EOL;
 

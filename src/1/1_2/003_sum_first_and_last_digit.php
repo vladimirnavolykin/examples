@@ -16,7 +16,8 @@ namespace example_1_3_003;
 function getSumFirstAndLastDigit(int|float $number): int
 {
     $numberAsString = (string) $number;
-    $firstDigit = (int) ltrim(((string) $number), "-")[0];
+
+    $firstDigit = (int) ltrim($numberAsString, "-")[0];
     $lastDigit = (int) $numberAsString[strlen($numberAsString) - 1];
 
     return $firstDigit + $lastDigit;

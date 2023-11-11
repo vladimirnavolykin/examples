@@ -21,7 +21,7 @@ function getLastSymbol(string $string): string
 {
     return $string === ''
         ? throw new RuntimeException()
-        : $string[strlen($string) -1];
+        : $string[strlen($string) - 1];
 }
 
 /**

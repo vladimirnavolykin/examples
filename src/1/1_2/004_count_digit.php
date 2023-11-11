@@ -17,7 +17,9 @@ function getCountOfDigits(int|float $number): int
 {
     $numberAsString = ltrim((string) $number, "-");
 
-    return str_contains($numberAsString, '.') ? strlen($numberAsString) - 1 : strlen($numberAsString);
+    return str_contains($numberAsString, '.')
+        ? strlen($numberAsString) - 1
+        : strlen($numberAsString);
 }
 
 /**
