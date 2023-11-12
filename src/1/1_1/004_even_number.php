@@ -21,7 +21,7 @@ function isEvenNumber(int $number): bool
 /**
  * test block
  */
-assertSuccess(isEvenNumber(-4) === true);
-assertSuccess(isEvenNumber(100) === true);
-assertSuccess(isEvenNumber(7) === false);
-assertSuccess(isEvenNumber(0) === true);
+assertSuccess('\\example_1_1_004\\isEvenNumber', true, [-4]);
+assertSuccess('\\example_1_1_004\\isEvenNumber', true, [100]);
+assertSuccess('\\example_1_1_004\\isEvenNumber', false, [7]);
+assertSuccess('\\example_1_1_004\\isEvenNumber', true, [0]);

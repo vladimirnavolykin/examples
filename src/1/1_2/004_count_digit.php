@@ -25,10 +25,10 @@ function getCountOfDigits(int|float $number): int
 /**
  * test block
  */
-assertSuccess(getCountOfDigits(-1) === 1);
-assertSuccess(getCountOfDigits(0.09) === 3);
-assertSuccess(getCountOfDigits(0) === 1);
-assertSuccess(getCountOfDigits(+1_000_000) === 7);
-assertSuccess(getCountOfDigits(.04) === 3);
-assertSuccess(getCountOfDigits(0x1A) === 2); // 0x1A = 26
-assertSuccess(getCountOfDigits(0123) === 2); // 0123 = 83
+assertSuccess('\\example_1_2_004\\getCountOfDigits', 1, [-1]);
+assertSuccess('\\example_1_2_004\\getCountOfDigits', 3, [0.09]);
+assertSuccess('\\example_1_2_004\\getCountOfDigits', 1, [0]);
+assertSuccess('\\example_1_2_004\\getCountOfDigits', 7, [+1_000_000]);
+assertSuccess('\\example_1_2_004\\getCountOfDigits', 3, [.04]);
+assertSuccess('\\example_1_2_004\\getCountOfDigits', 2, [0x1A]); // 0x1A = 26
+assertSuccess('\\example_1_2_004\\getCountOfDigits', 2, [0123]); // 0123 = 83

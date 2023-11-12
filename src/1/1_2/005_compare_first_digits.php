@@ -10,7 +10,7 @@ namespace example_1_2_005;
 
 /**
  * <b>Задача:</b> Даны два числа. Проверьте, что первые цифры этих чисел совпадают.
- * @see https://code.mu/ru/php/tasker/stager/1/1/
+ * @see https://code.mu/ru/php/tasker/stager/1/2/
  */
 
 function firstCharactersIsMatch(int|float $number1, int|float $number2): bool
@@ -21,5 +21,5 @@ function firstCharactersIsMatch(int|float $number1, int|float $number2): bool
 /**
  * test block
  */
-assertSuccess(firstCharactersIsMatch(-1, 123) === true);
-assertSuccess(firstCharactersIsMatch(0.09, 7) === false);
+assertSuccess('\\example_1_2_005\\firstCharactersIsMatch', true, [-1, 123]);
+assertSuccess('\\example_1_2_005\\firstCharactersIsMatch', false, [0.09, 7]);

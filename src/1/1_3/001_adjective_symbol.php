@@ -10,7 +10,7 @@ namespace example_1_3_001;
 
 /**
  * <b>Задача:</b> Дана строка. Если в этой строке более одного символа, выведите в консоль предпоследний символ этой строки.
- * @see https://code.mu/ru/php/tasker/stager/1/2/
+ * @see https://code.mu/ru/php/tasker/stager/1/3/
  */
 
 function getAdjectiveChar(string $string): string
@@ -25,6 +25,6 @@ function getAdjectiveChar(string $string): string
 /**
  * test block
  */
-assertSuccess(getAdjectiveChar('test') === 's');
-assertException('getAdjectiveChar', '');
-assertException('getAdjectiveChar', '6');
+assertSuccess('\\example_1_3_001\\getAdjectiveChar', 's', ['test']);
+assertException('\\example_1_3_001\\getAdjectiveChar', ['']);
+assertException('\\example_1_3_001\\getAdjectiveChar', ['6']);

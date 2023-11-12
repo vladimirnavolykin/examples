@@ -21,10 +21,10 @@ function getFirstDigitOfNumber(int|float $number): string
 /**
  * test block
  */
-assertSuccess(getFirstDigitOfNumber(-1) === '1');
-assertSuccess(getFirstDigitOfNumber(0.09) === '0');
-assertSuccess(getFirstDigitOfNumber(0) === '0');
-assertSuccess(getFirstDigitOfNumber(+1_000_000) === '1');
-assertSuccess(getFirstDigitOfNumber(.04) === '0');
-assertSuccess(getFirstDigitOfNumber(0x1A) === '2'); // 0x1A = 26
-assertSuccess(getFirstDigitOfNumber(0123) === '8'); // 0123 = 83
+assertSuccess('\\example_1_2_001\\getFirstDigitOfNumber', '1', [-1]);
+assertSuccess('\\example_1_2_001\\getFirstDigitOfNumber', '0', [0.09]);
+assertSuccess('\\example_1_2_001\\getFirstDigitOfNumber', '0', [0]);
+assertSuccess('\\example_1_2_001\\getFirstDigitOfNumber', '1', [+1_000_000]);
+assertSuccess('\\example_1_2_001\\getFirstDigitOfNumber', '0', [.04]);
+assertSuccess('\\example_1_2_001\\getFirstDigitOfNumber', '2', [0x1A]); // 0x1A = 26
+assertSuccess('\\example_1_2_001\\getFirstDigitOfNumber', '8', [0123]); // 0123 = 83

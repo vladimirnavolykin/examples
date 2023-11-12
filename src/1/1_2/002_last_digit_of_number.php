@@ -23,10 +23,10 @@ function getLastDigitOfNumber(int|float $number): string
 /**
  * test block
  */
-assertSuccess(getLastDigitOfNumber(-1) === '1');
-assertSuccess(getLastDigitOfNumber(0.09) === '9');
-assertSuccess(getLastDigitOfNumber(0) === '0');
-assertSuccess(getLastDigitOfNumber(+1_000_000) === '0');
-assertSuccess(getLastDigitOfNumber(.04) === '4');
-assertSuccess(getLastDigitOfNumber(0x1A) === '6'); // 0x1A = 26
-assertSuccess(getLastDigitOfNumber(0123) === '3'); // 0123 = 83
+assertSuccess('\\example_1_2_002\\getLastDigitOfNumber', '1', [-1]);
+assertSuccess('\\example_1_2_002\\getLastDigitOfNumber', '9', [0.09]);
+assertSuccess('\\example_1_2_002\\getLastDigitOfNumber', '0', [0]);
+assertSuccess('\\example_1_2_002\\getLastDigitOfNumber', '0', [+1_000_000]);
+assertSuccess('\\example_1_2_002\\getLastDigitOfNumber', '4', [.04]);
+assertSuccess('\\example_1_2_002\\getLastDigitOfNumber', '6', [0x1A]); // 0x1A = 26
+assertSuccess('\\example_1_2_002\\getLastDigitOfNumber', '3', [0123]); // 0123 = 83

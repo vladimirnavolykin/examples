@@ -6,17 +6,16 @@ if (PHP_SAPI !== 'cli') {
 
 require_once 'functions.php';
 
-$files = glob(__DIR__ . '/src/*/*/*.php');
+if (count($argv) > 1) {
+    $files = array_slice($argv, 1);
+} else {
+    $files = glob(__DIR__ . '/src/*/*/*.php');
+}
 
 echo "\033[43mНачало\033[49m" . PHP_EOL;
 
 foreach ($files as $file) {
-    try {
-        require_once $file;
-        echo "\033[92mУспешно:\033[39m " . basename($file) . PHP_EOL;
-    } catch (\Throwable) {
-        echo "\033[91mНе успешно:\033[39m " . basename($file) . PHP_EOL;
-    }
+    require_once $file;
 }
 
 echo "\033[43mКонец\033[49m";

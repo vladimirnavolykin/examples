@@ -28,6 +28,6 @@ function firstCharactersIsMatch(string $string1, string $string2): bool
 /**
  * test block
  */
-assertSuccess(firstCharactersIsMatch('test', ' test') === false);
-assertSuccess(firstCharactersIsMatch('test', 'test2') === true);
-assertException('firstCharactersIsMatch', '', '');
+assertSuccess('\\example_1_1_005\\firstCharactersIsMatch', false, ['test', ' test']);
+assertSuccess('\\example_1_1_005\\firstCharactersIsMatch', true, ['test', 'test2']);
+assertException('\\example_1_1_004\\firstCharactersIsMatch', ['', '']);

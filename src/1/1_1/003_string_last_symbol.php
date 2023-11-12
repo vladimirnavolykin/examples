@@ -27,8 +27,7 @@ function getLastSymbol(string $string): string
 /**
  * test block
  */
-assertSuccess(getLastSymbol('test string') === 'g');
-//assertSuccess(getLastSymbol('кириллица') === 'а');
-assertSuccess(getLastSymbol("\n") === "\n");
-assertException('getLastSymbol', '');
+assertSuccess('\\example_1_1_003\\getLastSymbol', 'g', ['test string']);
+assertSuccess('\\example_1_1_003\\getLastSymbol', "\n", ["\n"]);
+assertException('\\example_1_1_003\\getLastSymbol', ['']);
 

@@ -6,7 +6,7 @@
 
 declare(strict_types=1);
 
-namespace example_1_3_003;
+namespace example_1_2_003;
 
 /**
  * <b>Задача:</b> Дано число. Выведите в консоль сумму первой и последней цифры этого числа.
@@ -26,10 +26,10 @@ function getSumFirstAndLastDigit(int|float $number): int
 /**
  * test block
  */
-assertSuccess(getSumFirstAndLastDigit(-1) === 2);
-assertSuccess(getSumFirstAndLastDigit(0.09) === 9);
-assertSuccess(getSumFirstAndLastDigit(0) === 0);
-assertSuccess(getSumFirstAndLastDigit(+1_000_000) === 1);
-assertSuccess(getSumFirstAndLastDigit(.04) === 4);
-assertSuccess(getSumFirstAndLastDigit(0x1A) === 8); // 0x1A = 26
-assertSuccess(getSumFirstAndLastDigit(0123) === 11); // 0123 = 83
+assertSuccess('\\example_1_2_003\\getSumFirstAndLastDigit', 2, [-1]);
+assertSuccess('\\example_1_2_003\\getSumFirstAndLastDigit', 9, [0.09]);
+assertSuccess('\\example_1_2_003\\getSumFirstAndLastDigit', 0, [0]);
+assertSuccess('\\example_1_2_003\\getSumFirstAndLastDigit', 1, [+1_000_000]);
+assertSuccess('\\example_1_2_003\\getSumFirstAndLastDigit', 4, [.04]);
+assertSuccess('\\example_1_2_003\\getSumFirstAndLastDigit', 8, [0x1A]); // 0x1A = 26
+assertSuccess('\\example_1_2_003\\getSumFirstAndLastDigit', 11, [0123]); // 0123 = 83

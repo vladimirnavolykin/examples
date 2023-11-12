@@ -10,7 +10,7 @@ namespace example_1_3_002;
 
 /**
  * <b>Задача:</b> Даны два целых числа. Проверьте, что первое число без остатка делится на второе.
- * @see https://code.mu/ru/php/tasker/stager/1/2/
+ * @see https://code.mu/ru/php/tasker/stager/1/3/
  */
 
 function isMultiplicity(int $number1, int $number2): bool
@@ -21,5 +21,5 @@ function isMultiplicity(int $number1, int $number2): bool
 /**
  * test block
  */
-assertSuccess(isMultiplicity(10, 5) === true);
-assertSuccess(isMultiplicity(9, 5) === false);
+assertSuccess('\\example_1_3_002\\isMultiplicity', true, [10, 5]);
+assertSuccess('\\example_1_3_002\\isMultiplicity', false, [9, 5]);

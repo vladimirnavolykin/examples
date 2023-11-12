@@ -40,10 +40,10 @@ function isStringLength_v3(string $string): int
  * test block
  */
 foreach (['isStringLength', 'isStringLength_v2', 'isStringLength_v3'] as $functionName) {
-    assertSuccess("\\example_1_1_002\\{$functionName}"('') === 0);
-    assertSuccess("\\example_1_1_002\\{$functionName}"('test string 1') === 13);
-    assertSuccess("\\example_1_1_002\\{$functionName}"("\n") === 1);
+    assertSuccess("\\example_1_1_002\\{$functionName}", 0, ['']);
+    assertSuccess("\\example_1_1_002\\{$functionName}", 13, ['test string 1']);
+    assertSuccess("\\example_1_1_002\\{$functionName}", 1, ["\n"]);
 }
 
-assertSuccess(isStringLength('кириллица') === 9);
-assertSuccess(isStringLength_v3('кириллица') === 9);
+assertSuccess('\\example_1_1_002\\isStringLength', 9, ['кириллица']);
+assertSuccess('\\example_1_1_002\\isStringLength_v3', 9, ['кириллица']);

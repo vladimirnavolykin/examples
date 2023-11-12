@@ -36,7 +36,7 @@ function lastCharactersSearch(string $string): string
 /**
  * test block
  */
-assertSuccess(lastCharactersSearch('тест') === 'т');
-assertSuccess(lastCharactersSearch('соль') === 'л');
-assertException('lastCharactersSearch', '');
-assertException('lastCharactersSearch', 'ь');
+assertSuccess('\\example_1_1_006\\lastCharactersSearch', 'т', ['тест']);
+assertSuccess('\\example_1_1_006\\lastCharactersSearch', 'л', ['соль']);
+assertException('\\example_1_1_006\\lastCharactersSearch', ['']);
+assertException('\\example_1_1_006\\lastCharactersSearch', ['ь']);

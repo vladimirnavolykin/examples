@@ -18,10 +18,22 @@ function isNegativeNumber(int|float $number): bool
     return $number < 0;
 }
 
+function isNegativeNumber_v2(int|float $number): bool
+{
+    return abs($number) !== $number;
+}
+
+function isNegativeNumber_v3(int|float $number): bool
+{
+    return str_starts_with((string) $number, '-');
+}
+
 /**
  * test block
  */
-assertSuccess(isNegativeNumber(-1) === true);
-assertSuccess(isNegativeNumber(-5.77) === true);
-assertSuccess(isNegativeNumber(0) === false);
-assertSuccess(isNegativeNumber(100) === false);
+foreach (['isNegativeNumber', 'isNegativeNumber_v2', 'isNegativeNumber_v3'] as $functionName) {
+    assertSuccess("\\example_1_1_001\\{$functionName}", true, [-1]);
+    assertSuccess("\\example_1_1_001\\{$functionName}", true, [-5.77]);
+    assertSuccess("\\example_1_1_001\\{$functionName}", false, [0]);
+    assertSuccess("\\example_1_1_001\\{$functionName}", false, [100]);
+}
